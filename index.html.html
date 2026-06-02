@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebQuest: Le Quartier Vert 🌍</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body, button, table, h1, h2, h3, h4, p, span { font-family: 'Poppins', sans-serif !important; }
+        .tab-active { background-color: #131c41 !important; color: white !important; transform: scale(1.05); }
+        .sec-active { background-color: #3591d8 !important; color: white !important; }
+        .word-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+        .word-item { background: #f8fafc; border: 1px solid #e2e8f0; padding: 8px; border-radius: 10px; font-size: 0.75rem; text-align: center; }
+        .word-item b { color: #059669; display: block; font-size: 0.85rem; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">
+
+    <!-- CABECERA EN FRANCÉS -->
+    <header class="bg-slate-900 text-white py-10 px-6 shadow-md text-center relative border-b-4 border-emerald-600">
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <span class="bg-blue-200/70 text-slate-900 text-xs uppercase font-bold tracking-widest px-3 py-1 rounded-full border border-black-500/30 italic">Fase 5: ABP - Production et Co-évaluations</span>
+            <h1 class="text-3xl md:text-5xl font-bold mt-3 tracking-wide">Notre Quartier Vert, Durable et Agréable</h1>
+            <p class="text-slate-300 mt-3 max-w-2xl mx-auto text-sm md:text-base font-medium">
+                Comment pouvons-nous aider le maire à construire un quartier vert, durable et agréable pour tous les habitants ?
+            </p>
+        </div>
+    </header>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm overflow-x-auto">
+        <div class="max-w-7xl mx-auto px-4 flex space-x-1 md:space-x-2 py-3 whitespace-nowrap justify-start lg:justify-center">
+            <button onclick="mainTab('intro')" id="m-intro" class="main-tab px-4 py-2 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition tab-active">1. Introduction 👩‍💼</button>
+            <button onclick="mainTab('tache')" id="m-tache" class="main-tab px-4 py-2 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">2. Tarea 🎯</button>
+            <button onclick="mainTab('processus')" id="m-processus" class="main-tab px-4 py-2 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">3. Proceso ⚙️</button>
+            <button onclick="mainTab('ressources')" id="m-ressources" class="main-tab px-4 py-2 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition border-2 border-emerald-500">4. Sesiones 6 & 7: Recursos 🏗️</button>
+            <button onclick="mainTab('coin')" id="m-coin" class="main-tab px-4 py-2 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition border-2 border-blue-500">5. Sesión 8: Escritura ✍️</button>
+            <button onclick="mainTab('parler')" id="m-parler" class="main-tab px-4 py-2 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition border-2 border-amber-500">6. Sesión 9: Defensa Oral 📢</button>
+            <button onclick="mainTab('evaluation')" id="m-evaluation" class="main-tab px-4 py-2 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">7. Evaluación 📊</button>
+            <button onclick="mainTab('conclusion')" id="m-conclusion" class="main-tab px-4 py-2 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">8. Conclusión 🏁</button>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-6xl w-full mx-auto p-4 md:p-8">
+
+        <!-- 1. INTRODUCCIÓN (FRANCÉS A1) -->
+        <section id="content-intro" class="main-content block">
+            <div class="max-w-3xl mx-auto bg-white p-10 rounded-3xl shadow-xl border-t-8 border-emerald-500">
+                <div class="flex flex-col items-center text-center space-y-6">
+                    <div class="bg-emerald-100 text-emerald-700 p-4 rounded-full text-4xl">✉️</div>
+                    <h2 class="text-4xl font-black text-slate-900">Bonjour, chers urbanistes !</h2>
+                    <div class="space-y-4 text-xl text-slate-700 italic leading-relaxed">
+                        <p>"Je suis <strong>Géraldine</strong>, la maire de la ville."</p>
+                        <p>"Ma ville est grise. Je veux une ville <strong>verte</strong> et <strong>durable</strong>."</p>
+                        <p>"Aidez-moi ! Construisez un quartier écologique pour les habitants."</p>
+                        <p class="font-bold text-emerald-600">"Merci y bonne chance !"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. TAREA (ESPAÑOL - VERSIÓN RESTAURADA) -->
+        <section id="content-tache" class="main-content hidden space-y-6">
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-150">
+                <h2 class="text-3xl font-extrabold text-slate-800 mb-6 text-center">🎯 Vuestra Misión Final</h2>
+                <p class="text-slate-600 text-lg mb-8 text-center">Cada equipo es responsable de una zona estratégica del barrio. Debéis crear dos entregables de nivel profesional:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-6 bg-gradient-to-br from-slate-50 to-slate-100 border border-blue-200 rounded-xl space-y-3 shadow-sm">
+                        <div class="text-3xl">📖</div>
+                        <h3 class="font-bold text-blue-900 text-xl">Livrable Écrit (Book Creator)</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Creación de un prototipo digital visual con textos cortos en francés. Debéis describir los elementos urbanos y justificar el impacto ecológico basándoos en modelos reales.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-gradient-to-br from-slate-50 to-slate-100 border border-amber-200 rounded-xl space-y-3 shadow-sm">
+                        <div class="text-3xl">🗣️</div>
+                        <h3 class="font-bold text-amber-900 text-xl">Defensa Oral al Consejo</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Presentación oral colectiva frente a la Alcaldesa Géraldine para convencerla de que vuestro diseño es sostenible y agradable para los vecinos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PROCESO (ESPAÑOL - VERSIÓN RESTAURADA) -->
+        <section id="content-processus" class="main-content hidden space-y-6">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-150">
+                <h2 class="text-3xl font-extrabold text-slate-800 mb-6">⚙️ ¿Cómo vamos a trabajar?</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-emerald-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-lg">Investigación en equipo (S6 & S7)</h4>
+                            <p class="text-sm text-slate-600">Explorad vuestra zona en la pestaña de Recursos. Resolved las preguntas de reflexión y elegid vuestro vocabulario.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-emerald-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-lg">Construcción del Prototipo (S8)</h4>
+                            <p class="text-sm text-slate-600">Entrad en Book Creator. Añadid vuestro diseño y escribid las frases usando la "Esquina Lingüística".</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-emerald-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shrink-0">3</div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-lg">Ensayo General (S9)</h4>
+                            <p class="text-sm text-slate-600">Entrenad vuestra pronunciación y preparad el guión de defensa que tenéis en vuestro Journal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SESIONES 6 & 7: RECURSOS (MÁS REFLEXIONES) -->
+        <section id="content-ressources" class="main-content hidden space-y-6">
+            <div class="bg-slate-200 p-2 rounded-xl flex flex-wrap gap-2 justify-center">
+                <button onclick="subTab('sec1')" id="s-sec1" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm sec-active">1. Residencia 🏠</button>
+                <button onclick="subTab('sec2')" id="s-sec2" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm">2. Comercial 🛍️</button>
+                <button onclick="subTab('sec3')" id="s-sec3" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm">3. Verde 🌳</button>
+                <button onclick="subTab('sec4')" id="s-sec4" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm">4. Movilidad 🚲</button>
+                <button onclick="subTab('sec5')" id="s-sec5" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm">5. Cultura 🎨</button>
+                <button onclick="subTab('sec6')" id="s-sec6" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm">6. Servicios 🏥</button>
+            </div>
+
+            <div id="subcontent-sec1" class="sub-content block bg-white p-6 rounded-2xl border space-y-6">
+                <h3 class="text-xl font-bold border-b pb-2">Secteur 1 : Zone Résidentielle 🏠</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-5 rounded-xl">
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-emerald-800">🤔 Preguntas de Reflexión Profunda:</h4>
+                        <ul class="text-xs space-y-2 list-disc pl-4 text-slate-700 leading-relaxed">
+                            <li>¿Qué materiales naturales (madera, piedra) son mejores que el cemento para construir casas que no pasen calor?</li>
+                            <li>Si instalamos paneles solares, ¿cómo podemos compartir la energía sobrante con los vecinos que no tienen?</li>
+                            <li>¿Qué tipo de plantas en los balcones ayudan a que la temperatura del edificio baje en verano?</li>
+                            <li>¿Cómo podemos diseñar las ventanas para usar menos luz eléctrica durante el día?</li>
+                            <li>¿Es mejor construir casas individuales o edificios de pocos pisos para ahorrar espacio para la naturaleza?</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="text-xs font-bold text-slate-400 uppercase">Boîte à mots :</h4>
+                        <div class="word-grid">
+                            <div class="word-item">Casa / <b>La maison</b></div>
+                            <div class="word-item">Edificio / <b>L'immeuble</b></div>
+                            <div class="word-item">Panel solar / <b>Le panneau solaire</b></div>
+                            <div class="word-item">Vecino / <b>Le voisin</b></div>
+                            <div class="word-item">Madera / <b>Le bois</b></div>
+                            <div class="word-item">Ventana / <b>La fenêtre</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="subcontent-sec2" class="sub-content hidden bg-white p-6 rounded-2xl border space-y-6">
+                <h3 class="text-xl font-bold border-b pb-2">Secteur 2 : Zone Commerciale 🛍️</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-5 rounded-xl">
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-emerald-800">🤔 Preguntas de Reflexión Profunda:</h4>
+                        <ul class="text-xs space-y-2 list-disc pl-4 text-slate-700 leading-relaxed">
+                            <li>¿Por qué es más ecológico comprar manzanas del pueblo de al lado que de otro país lejano?</li>
+                            <li>Si una tienda vende productos "a granel" (sin envases), ¿cuántas bolsas de plástico ahorra un vecino al mes?</li>
+                            <li>¿Cómo ayuda tener tiendas cerca de casa a que la gente no use tanto el coche?</li>
+                            <li>¿Qué podemos hacer con los alimentos que las tiendas no venden para que no acaben en la basura?</li>
+                            <li>¿Cómo podemos convencer a los clientes para que traigan sus propias bolsas de tela?</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="text-xs font-bold text-slate-400 uppercase">Boîte à mots :</h4>
+                        <div class="word-grid">
+                            <div class="word-item">Tienda / <b>Le magasin</b></div>
+                            <div class="word-item">Verdura / <b>Le légume</b></div>
+                            <div class="word-item">Bolsa tela / <b>Le sac en tissu</b></div>
+                            <div class="word-item">Local / <b>Produit local</b></div>
+                            <div class="word-item">Mercado / <b>Le marché</b></div>
+                            <div class="word-item">Fruta / <b>Le fruit</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="subcontent-sec3" class="sub-content hidden bg-white p-6 rounded-2xl border space-y-6">
+                <h3 class="text-xl font-bold border-b pb-2">Secteur 3 : Zone Verte 🌳</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-5 rounded-xl">
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-emerald-800">🤔 Preguntas de Reflexión Profunda:</h4>
+                        <ul class="text-xs space-y-2 list-disc pl-4 text-slate-700 leading-relaxed">
+                            <li>¿Por qué un barrio con muchos árboles tiene el aire más limpio que uno sin vegetación?</li>
+                            <li>¿Cómo podemos recoger el agua de la lluvia para regar el huerto comunitario sin gastar agua del grifo?</li>
+                            <li>¿Qué insectos (como las abejas) son necesarios en nuestro parque y cómo podemos atraerlos?</li>
+                            <li>¿Qué beneficios tiene para los niños y los abuelos pasar tiempo en un jardín compartido?</li>
+                            <li>¿Podemos poner "jardines verticales" en las paredes de los edificios si no hay espacio en el suelo?</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="text-xs font-bold text-slate-400 uppercase">Boîte à mots :</h4>
+                        <div class="word-grid">
+                            <div class="word-item">Árbol / <b>L'arbre</b></div>
+                            <div class="word-item">Huerto / <b>Le potager</b></div>
+                            <div class="word-item">Flor / <b>La fleur</b></div>
+                            <div class="word-item">Abeja / <b>L'abeille</b></div>
+                            <div class="word-item">Agua / <b>L'eau</b></div>
+                            <div class="word-item">Parque / <b>Le parc</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="subcontent-sec4" class="sub-content hidden bg-white p-6 rounded-2xl border space-y-6">
+                <h3 class="text-xl font-bold border-b pb-2">Secteur 4 : Zone de Mobilité 🚲</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-5 rounded-xl">
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-emerald-800">🤔 Preguntas de Reflexión Profunda:</h4>
+                        <ul class="text-xs space-y-2 list-disc pl-4 text-slate-700 leading-relaxed">
+                            <li>¿Por qué un tranvía es mejor para el planeta que 50 coches individuales?</li>
+                            <li>¿Qué necesita una calle para que los niños puedan ir al colegio en bici de forma segura?</li>
+                            <li>¿Cómo el ruido de los coches afecta a la salud de los vecinos? ¿Cómo podemos reducirlo?</li>
+                            <li>Si quitamos los parkings de coches, ¿qué cosas divertidas podríamos poner en ese espacio?</li>
+                            <li>¿Qué aparatos eléctricos (patinetes, bicis) ayudan a los vecinos que viven lejos a llegar rápido al centro?</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="text-xs font-bold text-slate-400 uppercase">Boîte à mots :</h4>
+                        <div class="word-grid">
+                            <div class="word-item">Bicicleta / <b>Le vélo</b></div>
+                            <div class="word-item">Tranvía / <b>Le tramway</b></div>
+                            <div class="word-item">Carril bici / <b>La piste cyclable</b></div>
+                            <div class="word-item">Peatón / <b>Le piéton</b></div>
+                            <div class="word-item">Autobús / <b>Le bus</b></div>
+                            <div class="word-item">Seguridad / <b>La sécurité</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="subcontent-sec5" class="sub-content hidden bg-white p-6 rounded-2xl border space-y-6">
+                <h3 class="text-xl font-bold border-b pb-2">Secteur 5 : Zone Culturelle 🎨</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-5 rounded-xl">
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-emerald-800">🤔 Preguntas de Reflexión Profunda:</h4>
+                        <ul class="text-xs space-y-2 list-disc pl-4 text-slate-700 leading-relaxed">
+                            <li>¿Cómo ayuda una biblioteca pública a que no tengamos que comprar tantos libros nuevos?</li>
+                            <li>¿Podemos usar materiales reciclados para crear estatuas o arte decorativo en nuestras plazas?</li>
+                            <li>¿Qué actividades podemos organizar en el teatro del barrio para que los vecinos se conozcan mejor?</li>
+                            <li>¿Cómo podemos transformar un edificio viejo en un centro cultural sin tener que destruirlo?</li>
+                            <li>¿Por qué tener música y arte en la calle hace que el barrio sea más "agradable" (agréable)?</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="text-xs font-bold text-slate-400 uppercase">Boîte à mots :</h4>
+                        <div class="word-grid">
+                            <div class="word-item">Biblioteca / <b>La bibliothèque</b></div>
+                            <div class="word-item">Museo / <b>Le musée</b></div>
+                            <div class="word-item">Teatro / <b>Le théâtre</b></div>
+                            <div class="word-item">Colegio / <b>L'école</b></div>
+                            <div class="word-item">Libro / <b>Le livre</b></div>
+                            <div class="word-item">Cultura / <b>La culture</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="subcontent-sec6" class="sub-content hidden bg-white p-6 rounded-2xl border space-y-6">
+                <h3 class="text-xl font-bold border-b pb-2">Secteur 6 : Zone de Services 🏥</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-5 rounded-xl">
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-emerald-800">🤔 Preguntas de Reflexión Profunda:</h4>
+                        <ul class="text-xs space-y-2 list-disc pl-4 text-slate-700 leading-relaxed">
+                            <li>¿Qué contenedores de reciclaje son los más importantes en un barrio ecológico?</li>
+                            <li>¿Cómo podemos usar el compost (tierra de comida) para que las plantas del barrio crezcan más fuertes?</li>
+                            <li>¿Por qué es importante tener el centro de salud (l'hôpital) cerca de donde vive la gente?</li>
+                            <li>¿Cómo podemos reducir el gasto de agua en los colegios y edificios públicos?</li>
+                            <li>¿Qué servicios de limpieza silenciosos podemos usar para no molestar a los vecinos?</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="text-xs font-bold text-slate-400 uppercase">Boîte à mots :</h4>
+                        <div class="word-grid">
+                            <div class="word-item">Reciclaje / <b>Le recyclage</b></div>
+                            <div class="word-item">Hospital / <b>L'hôpital</b></div>
+                            <div class="word-item">Salud / <b>La santé</b></div>
+                            <div class="word-item">Basura / <b>Les déchets</b></div>
+                            <div class="word-item">Compostaje / <b>Le compostage</b></div>
+                            <div class="word-item">Limpio / <b>Propre</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SESIÓN 8: ESQUINA LINGÜÍSTICA (FRANCÉS ÚNICAMENTE) -->
+        <section id="content-coin" class="main-content hidden space-y-6">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border-2 border-blue-200">
+                <h2 class="text-2xl font-bold text-slate-800 mb-4">✍️ Sesión 8: On écrit pour le maire !</h2>
+                <p class="text-sm text-slate-600 mb-6">Utilisez ce générateur pour vos phrases, mais soyez <strong>créatifs</strong> !</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-3 mb-6">
+                    <div class="p-3 bg-white border rounded-lg cursor-pointer hover:border-blue-400" onclick="selectPart('green', 'Dans mon secteur, il y a')">
+                        <span class="text-[9px] font-bold uppercase block text-slate-400">1. Début</span>
+                        <p class="text-xs font-bold">Dans mon secteur, il y a...</p>
+                    </div>
+                    <div class="p-3 bg-white border rounded-lg space-y-2">
+                        <span class="text-[9px] font-bold uppercase block text-slate-400">2. Élément</span>
+                        <select onchange="selectPart('blue', this.value)" class="w-full text-[10px] p-1 border rounded font-bold">
+                            <option value="">Choisir...</option>
+                            <option value="des arbres">des arbres</option>
+                            <option value="un tramway">un tramway</option>
+                            <option value="des panneaux solaires">des panneaux solaires</option>
+                            <option value="une piste cyclable">une piste cyclable</option>
+                            <option value="un potager">un potager</option>
+                        </select>
+                    </div>
+                    <div class="p-3 bg-white border rounded-lg space-y-2">
+                        <span class="text-[9px] font-bold uppercase block text-slate-400">3. Justification</span>
+                        <select onchange="selectPart('orange', this.value)" class="w-full text-[10px] p-1 border rounded font-bold">
+                            <option value="">Choisir...</option>
+                            <option value="parce que c'est écologique">parce que c'est écologique</option>
+                            <option value="parce que c'est durable">parce que c'est durable</option>
+                            <option value="pour les habitants">pour les habitants</option>
+                            <option value="c'est bon pour l'air">c'est bon pour l'air</option>
+                        </select>
+                    </div>
+                    <div class="p-3 bg-white border rounded-lg space-y-2">
+                        <span class="text-[9px] font-bold uppercase block text-slate-400">4. Inspiration</span>
+                        <select onchange="selectPart('purple', this.value)" class="w-full text-[10px] p-1 border rounded font-bold">
+                            <option value="">Choisir ville...</option>
+                            <option value="comme à Nantes">comme à Nantes</option>
+                            <option value="comme à Lyon">comme à Lyon</option>
+                            <option value="comme à Strasbourg">comme à Strasbourg</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 text-blue-300 p-6 rounded-xl text-lg text-center font-mono border-4 border-slate-800">
+                    <span id="preview-green">...</span> <span id="preview-blue">...</span> <span id="preview-orange">...</span> <span id="preview-purple">...</span>.
+                </div>
+                <button onclick="copySentence()" class="w-full mt-4 bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">📋 Copier la phrase</button>
+            </div>
+        </section>
+
+        <!-- 6. SESIÓN 9: DEFENSA ORAL -->
+        <section id="content-parler" class="main-content hidden space-y-6">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border-2 border-amber-200">
+                <h2 class="text-2xl font-bold text-slate-800 mb-4">📢 Sesión 9: On répète ! (Guion de Presentación)</h2>
+                <div class="space-y-4">
+                    <div class="p-4 border-l-4 border-amber-400 bg-amber-50">
+                        <h4 class="font-bold text-amber-900 text-sm italic">Paso 1: Saludo y presentación del equipo</h4>
+                        <p class="text-xs mt-1">"Bonjour Madame la Maire. Nous sommes l'équipe d'urbanistes."</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-amber-400 bg-amber-50">
+                        <h4 class="font-bold text-amber-900 text-sm italic">Paso 2: Presentar vuestro sector</h4>
+                        <p class="text-xs mt-1">"Notre secteur est la zone (Residencial/Verde...)."</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-amber-400 bg-amber-50">
+                        <h4 class="font-bold text-amber-900 text-sm italic">Paso 3: Explicar por qué vuestra solución es la mejor</h4>
+                        <p class="text-xs mt-1">"Notre projet est durable et agréable pour tout le monde."</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-amber-400 bg-amber-50">
+                        <h4 class="font-bold text-amber-900 text-sm italic">Paso 4: Despedida formal</h4>
+                        <p class="text-xs mt-1">"Merci de votre attention. Au revoir !"</p>
+                    </div>
+                </div>
+                <div class="mt-8 flex gap-4">
+                    <button onclick="speakFrench('Bonjour Madame la Maire. Nous sommes l\'équipe d\'urbanistes.')" class="bg-slate-800 text-white px-4 py-2 rounded-lg text-xs font-bold">🔊 Escuchar Saludo</button>
+                    <button onclick="speakFrench('Merci de votre attention. Au revoir !')" class="bg-slate-800 text-white px-4 py-2 rounded-lg text-xs font-bold">🔊 Escuchar Cierre</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. EVALUACIÓN (ESPAÑOL) -->
+        <section id="content-evaluation" class="main-content hidden space-y-6">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-150">
+                <h2 class="text-2xl font-bold text-slate-800 mb-6">📊 Rúbrica de Evaluación</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-900 text-white text-sm">
+                                <th class="p-3">Criterio</th>
+                                <th class="p-3">Excelente (3)</th>
+                                <th class="p-3">Bien (2)</th>
+                                <th class="p-3">A mejorar (1)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs divide-y">
+                            <tr><td class="p-4 font-bold">Contenido Escrito</td><td>Responde a la alcaldesa y cita una ciudad francesa.</td><td>Falta la referencia a la ciudad o la justificación.</td><td>No responde a la pregunta guía.</td></tr>
+                            <tr><td class="p-4 font-bold">Defensa Oral</td><td>Habla con claridad y convence a la alcaldesa.</td><td>Lee mucho el guion sin mirar al público.</td><td>No se entiende el discurso.</td></tr>
+                            <tr><td class="p-4 font-bold">Trabajo en Equipo</td><td>Todos colaboran y asumen su rol perfectamente.</td><td>Uno o dos alumnos hacen casi todo el trabajo.</td><td>No hay coordinación en el grupo.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CONCLUSIÓN (ESPAÑOL) -->
+        <section id="content-conclusion" class="main-content hidden">
+            <div class="bg-white p-12 rounded-3xl shadow-sm border border-slate-150 text-center space-y-6">
+                <div class="text-6xl animate-bounce">🏆</div>
+                <h2 class="text-4xl font-black text-slate-900">¡Felicidades, Urbanistas!</h2>
+                <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                    Habéis ayudado a transformar la ciudad. Gracias a vuestro trabajo, ahora el barrio de Géraldine es un lugar verde, agradable y preparado para el futuro.
+                </p>
+                <div class="inline-block bg-emerald-100 text-emerald-800 px-6 py-2 rounded-full font-bold uppercase text-xs">
+                    🌍 Proyecto Finalizado con Éxito • ODS 11
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-500 py-6 text-center text-xs border-t border-slate-800 mt-auto">
+        <p>© 2026 Plateforme WebQuest Paula Fuentes Ruiz y Marina Diaz López</p>
+    </footer>
+
+    <script>
+        function mainTab(targetId) {
+            document.querySelectorAll('.main-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById('content-' + targetId).classList.remove('hidden');
+            document.querySelectorAll('.main-tab').forEach(btn => btn.classList.remove('tab-active'));
+            document.getElementById('m-' + targetId).classList.add('tab-active');
+        }
+
+        function subTab(targetId) {
+            document.querySelectorAll('.sub-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById('subcontent-' + targetId).classList.remove('hidden');
+            document.querySelectorAll('.sub-tab').forEach(btn => btn.classList.remove('sec-active'));
+            document.getElementById('s-' + targetId).classList.add('sec-active');
+        }
+
+        let phraseObj = { green: '', blue: '', orange: '', purple: '' };
+        function selectPart(color, text) {
+            phraseObj[color] = text;
+            document.getElementById('preview-' + color).innerText = text + " ";
+        }
+
+        function copySentence() {
+            const finalTxt = `${phraseObj.green} ${phraseObj.blue} ${phraseObj.orange} ${phraseObj.purple}.`;
+            if(!phraseObj.green || !phraseObj.blue || !phraseObj.orange) {
+                alert("Attention ! Tu dois choisir les éléments."); return;
+            }
+            navigator.clipboard.writeText(finalTxt);
+            alert("Phrase copiée !");
+        }
+
+        function speakFrench(textToSpeak) {
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                utterance.lang = 'fr-FR';
+                utterance.rate = 0.8;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+    </script>
+</body>
+</html>
