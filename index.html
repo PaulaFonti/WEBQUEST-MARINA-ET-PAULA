@@ -160,179 +160,234 @@
     </div>
 </section>
 
-        <!-- 4. SESIONES 6 & 7: RECURSOS (MÁS REFLEXIONES) -->
-        <section id="content-ressources" class="main-content hidden space-y-6">
-            <div class="bg-slate-200 p-2 rounded-xl flex flex-wrap gap-2 justify-center">
-                <button onclick="subTab('sec1')" id="s-sec1" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm sec-active">1. Residencia 🏠</button>
-                <button onclick="subTab('sec2')" id="s-sec2" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm">2. Comercial 🛍️</button>
-                <button onclick="subTab('sec3')" id="s-sec3" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm">3. Verde 🌳</button>
-                <button onclick="subTab('sec4')" id="s-sec4" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm">4. Movilidad 🚲</button>
-                <button onclick="subTab('sec5')" id="s-sec5" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm">5. Cultura 🎨</button>
-                <button onclick="subTab('sec6')" id="s-sec6" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm">6. Servicios 🏥</button>
-            </div>
+      <!-- 4. SESIONES 6 & 7: RECURSOS -->
+<section id="content-ressources" class="main-content hidden space-y-6">
+    
+    <!-- Botones de pestañas -->
+    <div class="bg-slate-200 p-2 rounded-xl flex flex-wrap gap-2 justify-center">
+        <button onclick="subTab('sec1')" id="s-sec1" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm sec-active">1. Résidentiel 🏠</button>
+        <button onclick="subTab('sec2')" id="s-sec2" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm">2. Commercial 🛍️</button>
+        <button onclick="subTab('sec3')" id="s-sec3" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm">3. Vert 🌳</button>
+        <button onclick="subTab('sec4')" id="s-sec4" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm">4. Mobilité 🚌</button>
+        <button onclick="subTab('sec5')" id="s-sec5" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm">5. Culture 🎨</button>
+        <button onclick="subTab('sec6')" id="s-sec6" class="sub-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 shadow-sm">6. Services 🏥</button>
+    </div>
 
-            <div id="subcontent-sec1" class="sub-content block bg-white p-6 rounded-2xl border space-y-6">
-                <h3 class="text-xl font-bold border-b pb-2">Secteur 1 : Zone Résidentielle 🏠</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-5 rounded-xl">
-                    <div class="space-y-3">
-                        <h4 class="font-bold text-emerald-800">🤔 Preguntas de Reflexión Profunda:</h4>
-                        <ul class="text-xs space-y-2 list-disc pl-4 text-slate-700 leading-relaxed">
-                            <li>¿Qué materiales naturales (madera, piedra) son mejores que el cemento para construir casas que no pasen calor?</li>
-                            <li>Si instalamos paneles solares, ¿cómo podemos compartir la energía sobrante con los vecinos que no tienen?</li>
-                            <li>¿Qué tipo de plantas en los balcones ayudan a que la temperatura del edificio baje en verano?</li>
-                            <li>¿Cómo podemos diseñar las ventanas para usar menos luz eléctrica durante el día?</li>
-                            <li>¿Es mejor construir casas individuales o edificios de pocos pisos para ahorrar espacio para la naturaleza?</li>
-                        </ul>
-                    </div>
-                    <div class="space-y-3">
-                        <h4 class="text-xs font-bold text-slate-400 uppercase">Boîte à mots :</h4>
-                        <div class="word-grid">
-                            <div class="word-item">Casa / <b>La maison</b></div>
-                            <div class="word-item">Edificio / <b>L'immeuble</b></div>
-                            <div class="word-item">Panel solar / <b>Le panneau solaire</b></div>
-                            <div class="word-item">Vecino / <b>Le voisin</b></div>
-                            <div class="word-item">Madera / <b>Le bois</b></div>
-                            <div class="word-item">Ventana / <b>La fenêtre</b></div>
-                        </div>
-                    </div>
+    <!-- SECTOR 1: RÉSIDENTIEL -->
+    <div id="subcontent-sec1" class="sub-content block bg-white p-6 rounded-2xl border space-y-6">
+        <h3 class="text-xl font-bold border-b pb-2 text-slate-800">Secteur 1 : Zone Résidentielle</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-3 bg-slate-50 p-5 rounded-xl">
+                <h4 class="font-bold text-emerald-800">🤔 Questions de réflexion :</h4>
+                <ul class="text-sm space-y-2 text-slate-700 list-disc pl-4">
+                    <li>Qu’est-ce qu’il y a sur le toit des maisons ?</li>
+                    <li>Où est la poubelle de recyclage dans la rue ?</li>
+                    <li>Comment est l’électricité dans l’appartement ?</li>
+                    <li>Il y a un petit jardin ou un balcon vert ?</li>
+                    <li>Est-ce qu’il y a un potager urbain ?</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xs font-bold text-slate-400 uppercase mb-3">Boîte à mots :</h4>
+                <div class="grid grid-cols-3 gap-2" onmouseenter="playFlipSound()">
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La maison</div><div class="word-back">La casa</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">L'immeuble</div><div class="word-back">El edificio</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La famille</div><div class="word-back">La familia</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le voisin</div><div class="word-back">El vecino</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La rue</div><div class="word-back">La calle</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La porte</div><div class="word-back">La puerta</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La fenêtre</div><div class="word-back">La ventana</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le jardin</div><div class="word-back">El jardín</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le garage</div><div class="word-back">El garaje</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La poubelle</div><div class="word-back">El cubo</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le recyclage</div><div class="word-back">El reciclaje</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">L'eau</div><div class="word-back">El agua</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La lumière</div><div class="word-back">La luz</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">L’électricité</div><div class="word-back">La electricidad</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le quartier</div><div class="word-back">El barrio</div></div></div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <div id="subcontent-sec2" class="sub-content hidden bg-white p-6 rounded-2xl border space-y-6">
-                <h3 class="text-xl font-bold border-b pb-2">Secteur 2 : Zone Commerciale 🛍️</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-5 rounded-xl">
-                    <div class="space-y-3">
-                        <h4 class="font-bold text-emerald-800">🤔 Preguntas de Reflexión Profunda:</h4>
-                        <ul class="text-xs space-y-2 list-disc pl-4 text-slate-700 leading-relaxed">
-                            <li>¿Por qué es más ecológico comprar manzanas del pueblo de al lado que de otro país lejano?</li>
-                            <li>Si una tienda vende productos "a granel" (sin envases), ¿cuántas bolsas de plástico ahorra un vecino al mes?</li>
-                            <li>¿Cómo ayuda tener tiendas cerca de casa a que la gente no use tanto el coche?</li>
-                            <li>¿Qué podemos hacer con los alimentos que las tiendas no venden para que no acaben en la basura?</li>
-                            <li>¿Cómo podemos convencer a los clientes para que traigan sus propias bolsas de tela?</li>
-                        </ul>
-                    </div>
-                    <div class="space-y-3">
-                        <h4 class="text-xs font-bold text-slate-400 uppercase">Boîte à mots :</h4>
-                        <div class="word-grid">
-                            <div class="word-item">Tienda / <b>Le magasin</b></div>
-                            <div class="word-item">Verdura / <b>Le légume</b></div>
-                            <div class="word-item">Bolsa tela / <b>Le sac en tissu</b></div>
-                            <div class="word-item">Local / <b>Produit local</b></div>
-                            <div class="word-item">Mercado / <b>Le marché</b></div>
-                            <div class="word-item">Fruta / <b>Le fruit</b></div>
-                        </div>
-                    </div>
+    <!-- SECTOR 2: COMMERCIAL -->
+    <div id="subcontent-sec2" class="sub-content hidden bg-white p-6 rounded-2xl border space-y-6">
+        <h3 class="text-xl font-bold border-b pb-2 text-slate-800">Secteur 2 : Zone Commerciale</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-3 bg-slate-50 p-5 rounded-xl">
+                <h4 class="font-bold text-emerald-800">🤔 Questions de réflexion :</h4>
+                <ul class="text-sm space-y-2 text-slate-700 list-disc pl-4">
+                    <li>Qu'est-ce qu'on peut acheter au marché des producteurs ?</li>
+                    <li>Les productos sont locaux ou traditionnels ?</li>
+                    <li>Comment est le sac pour porter les fruits ?</li>
+                    <li>Le prix est cher ou correct pour les clients ?</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xs font-bold text-slate-400 uppercase mb-3">Boîte à mots :</h4>
+                <div class="grid grid-cols-3 gap-2" onmouseenter="playFlipSound()">
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">L'argent</div><div class="word-back">El dinero</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le prix</div><div class="word-back">El precio</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le client</div><div class="word-back">El cliente</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le vendeur</div><div class="word-back">El vendedor</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le sac papier</div><div class="word-back">Bolsa papel</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le panier</div><div class="word-back">La cesta</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Produit local</div><div class="word-back">Prod. local</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le magasin</div><div class="word-back">La tienda</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le marché</div><div class="word-back">El mercado</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La boutique</div><div class="word-back">La boutique</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">L'achat</div><div class="word-back">La compra</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Produit bio</div><div class="word-back">Prod. ecológico</div></div></div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <div id="subcontent-sec3" class="sub-content hidden bg-white p-6 rounded-2xl border space-y-6">
-                <h3 class="text-xl font-bold border-b pb-2">Secteur 3 : Zone Verte 🌳</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-5 rounded-xl">
-                    <div class="space-y-3">
-                        <h4 class="font-bold text-emerald-800">🤔 Preguntas de Reflexión Profunda:</h4>
-                        <ul class="text-xs space-y-2 list-disc pl-4 text-slate-700 leading-relaxed">
-                            <li>¿Por qué un barrio con muchos árboles tiene el aire más limpio que uno sin vegetación?</li>
-                            <li>¿Cómo podemos recoger el agua de la lluvia para regar el huerto comunitario sin gastar agua del grifo?</li>
-                            <li>¿Qué insectos (como las abejas) son necesarios en nuestro parque y cómo podemos atraerlos?</li>
-                            <li>¿Qué beneficios tiene para los niños y los abuelos pasar tiempo en un jardín compartido?</li>
-                            <li>¿Podemos poner "jardines verticales" en las paredes de los edificios si no hay espacio en el suelo?</li>
-                        </ul>
-                    </div>
-                    <div class="space-y-3">
-                        <h4 class="text-xs font-bold text-slate-400 uppercase">Boîte à mots :</h4>
-                        <div class="word-grid">
-                            <div class="word-item">Árbol / <b>L'arbre</b></div>
-                            <div class="word-item">Huerto / <b>Le potager</b></div>
-                            <div class="word-item">Flor / <b>La fleur</b></div>
-                            <div class="word-item">Abeja / <b>L'abeille</b></div>
-                            <div class="word-item">Agua / <b>L'eau</b></div>
-                            <div class="word-item">Parque / <b>Le parc</b></div>
-                        </div>
-                    </div>
+    <!-- SECTOR 3: VERT -->
+    <div id="subcontent-sec3" class="sub-content hidden bg-white p-6 rounded-2xl border space-y-6">
+        <h3 class="text-xl font-bold border-b pb-2 text-slate-800">Secteur 3 : Zone Verte</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-3 bg-slate-50 p-5 rounded-xl">
+                <h4 class="font-bold text-emerald-800">🤔 Questions de réflexion :</h4>
+                <ul class="text-sm space-y-2 text-slate-700 list-disc pl-4">
+                    <li>Qu’est-ce qu’il y a dans l'espace vert ?</li>
+                    <li>Où peuvent jouer les enfants ?</li>
+                    <li>Pourquoi l’air est pur dans cette zone ?</li>
+                    <li>Il y a des zones pour les animaux ?</li>
+                    <li>Il y aura des jardins partagés comme à Nantes ?</li>
+                    <li>Est-ce qu'il y a des poubelles pour le recyclage ?</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xs font-bold text-slate-400 uppercase mb-3">Boîte à mots :</h4>
+                <div class="grid grid-cols-3 gap-2" onmouseenter="playFlipSound()">
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">L’arbre</div><div class="word-back">El árbol</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La plante</div><div class="word-back">La planta</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le potager</div><div class="word-back">El jardín/huerto</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Espaces verts</div><div class="word-back">Espacios verdes</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le parc</div><div class="word-back">El parque</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">L’herbe</div><div class="word-back">La hierba</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La terre</div><div class="word-back">La tierra</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le soleil</div><div class="word-back">El sol</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La nature</div><div class="word-back">La naturaleza</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Écologique</div><div class="word-back">Ecológico</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Planter</div><div class="word-back">Plantar</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La forêt</div><div class="word-back">El bosque</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le sentier</div><div class="word-back">El sendero</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le compost</div><div class="word-back">El compost</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">L’air pur</div><div class="word-back">Aire limpio</div></div></div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <div id="subcontent-sec4" class="sub-content hidden bg-white p-6 rounded-2xl border space-y-6">
-                <h3 class="text-xl font-bold border-b pb-2">Secteur 4 : Zone de Mobilité 🚲</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-5 rounded-xl">
-                    <div class="space-y-3">
-                        <h4 class="font-bold text-emerald-800">🤔 Preguntas de Reflexión Profunda:</h4>
-                        <ul class="text-xs space-y-2 list-disc pl-4 text-slate-700 leading-relaxed">
-                            <li>¿Por qué un tranvía es mejor para el planeta que 50 coches individuales?</li>
-                            <li>¿Qué necesita una calle para que los niños puedan ir al colegio en bici de forma segura?</li>
-                            <li>¿Cómo el ruido de los coches afecta a la salud de los vecinos? ¿Cómo podemos reducirlo?</li>
-                            <li>Si quitamos los parkings de coches, ¿qué cosas divertidas podríamos poner en ese espacio?</li>
-                            <li>¿Qué aparatos eléctricos (patinetes, bicis) ayudan a los vecinos que viven lejos a llegar rápido al centro?</li>
-                        </ul>
-                    </div>
-                    <div class="space-y-3">
-                        <h4 class="text-xs font-bold text-slate-400 uppercase">Boîte à mots :</h4>
-                        <div class="word-grid">
-                            <div class="word-item">Bicicleta / <b>Le vélo</b></div>
-                            <div class="word-item">Tranvía / <b>Le tramway</b></div>
-                            <div class="word-item">Carril bici / <b>La piste cyclable</b></div>
-                            <div class="word-item">Peatón / <b>Le piéton</b></div>
-                            <div class="word-item">Autobús / <b>Le bus</b></div>
-                            <div class="word-item">Seguridad / <b>La sécurité</b></div>
-                        </div>
-                    </div>
+    <!-- SECTOR 4: MOBILITÉ -->
+    <div id="subcontent-sec4" class="sub-content hidden bg-white p-6 rounded-2xl border space-y-6">
+        <h3 class="text-xl font-bold border-b pb-2 text-slate-800">Secteur 4 : Zone de Mobilité</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-3 bg-slate-50 p-5 rounded-xl">
+                <h4 class="font-bold text-emerald-800">🤔 Questions de réflexion :</h4>
+                <ul class="text-sm space-y-2 text-slate-700 list-disc pl-4">
+                    <li>Comment peuvent voyager les citoyens dans le quartier ?</li>
+                    <li>Le bus est payant ou gratuit pour tous ?</li>
+                    <li>Où marchent les piétons avec sécurité ?</li>
+                    <li>Il y a des pistes cyclables ?</li>
+                    <li>Les enfants peuvent aller seuls à l’école ?</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xs font-bold text-slate-400 uppercase mb-3">Boîte à mots :</h4>
+                <div class="grid grid-cols-3 gap-2" onmouseenter="playFlipSound()">
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le vélo</div><div class="word-back">La bicicleta</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Bus électrique</div><div class="word-back">Bus eléctrico</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le tramway</div><div class="word-back">El tranvía</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La trottinette</div><div class="word-back">El patinete</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le roller</div><div class="word-back">El patín</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le train</div><div class="word-back">El tren</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Voiture élec.</div><div class="word-back">Coche eléctrico</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le piéton</div><div class="word-back">El peatón</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Gratuit</div><div class="word-back">Gratis</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Propre</div><div class="word-back">Limpio</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Rapide</div><div class="word-back">Rápido</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Sûr</div><div class="word-back">Seguro</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Piste cyclable</div><div class="word-back">Carril bici</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Covoiturage</div><div class="word-back">Coche comp.</div></div></div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <div id="subcontent-sec5" class="sub-content hidden bg-white p-6 rounded-2xl border space-y-6">
-                <h3 class="text-xl font-bold border-b pb-2">Secteur 5 : Zone Culturelle 🎨</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-5 rounded-xl">
-                    <div class="space-y-3">
-                        <h4 class="font-bold text-emerald-800">🤔 Preguntas de Reflexión Profunda:</h4>
-                        <ul class="text-xs space-y-2 list-disc pl-4 text-slate-700 leading-relaxed">
-                            <li>¿Cómo ayuda una biblioteca pública a que no tengamos que comprar tantos libros nuevos?</li>
-                            <li>¿Podemos usar materiales reciclados para crear estatuas o arte decorativo en nuestras plazas?</li>
-                            <li>¿Qué actividades podemos organizar en el teatro del barrio para que los vecinos se conozcan mejor?</li>
-                            <li>¿Cómo podemos transformar un edificio viejo en un centro cultural sin tener que destruirlo?</li>
-                            <li>¿Por qué tener música y arte en la calle hace que el barrio sea más "agradable" (agréable)?</li>
-                        </ul>
-                    </div>
-                    <div class="space-y-3">
-                        <h4 class="text-xs font-bold text-slate-400 uppercase">Boîte à mots :</h4>
-                        <div class="word-grid">
-                            <div class="word-item">Biblioteca / <b>La bibliothèque</b></div>
-                            <div class="word-item">Museo / <b>Le musée</b></div>
-                            <div class="word-item">Teatro / <b>Le théâtre</b></div>
-                            <div class="word-item">Colegio / <b>L'école</b></div>
-                            <div class="word-item">Libro / <b>Le livre</b></div>
-                            <div class="word-item">Cultura / <b>La culture</b></div>
-                        </div>
-                    </div>
+    <!-- SECTOR 5: CULTURE -->
+    <div id="subcontent-sec5" class="sub-content hidden bg-white p-6 rounded-2xl border space-y-6">
+        <h3 class="text-xl font-bold border-b pb-2 text-slate-800">Secteur 5 : Zone Culturelle</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-3 bg-slate-50 p-5 rounded-xl">
+                <h4 class="font-bold text-emerald-800">🤔 Questions de réflexion :</h4>
+                <ul class="text-sm space-y-2 text-slate-700 list-disc pl-4">
+                    <li>Il y a un cinéma du quartier ?</li>
+                    <li>Est-ce qu'il existe des installations de sport ?</li>
+                    <li>Qu’est-ce qu’on visite como aspects culturels ?</li>
+                    <li>Il y a un théâtre ou une salle de concerts ?</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xs font-bold text-slate-400 uppercase mb-3">Boîte à mots :</h4>
+                <div class="grid grid-cols-3 gap-2" onmouseenter="playFlipSound()">
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Art recyclé</div><div class="word-back">Arte reciclado</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Festival durable</div><div class="word-back">Festival sost.</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Exposition</div><div class="word-back">Exposición</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Bibliothèque</div><div class="word-back">Biblioteca</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Livres num.</div><div class="word-back">Libros dig.</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Cinéma</div><div class="word-back">Cine</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Spectacle</div><div class="word-back">Espectáculo</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Musique locale</div><div class="word-back">Música local</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Culture locale</div><div class="word-back">Cultura local</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Atelier recyc.</div><div class="word-back">Taller recicla.</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Atelier éco.</div><div class="word-back">Taller eco.</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Matériaux recyc.</div><div class="word-back">Mat. reciclados</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Énergie verte</div><div class="word-back">Energía verde</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Espace culturel</div><div class="word-back">Espacio cult.</div></div></div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <div id="subcontent-sec6" class="sub-content hidden bg-white p-6 rounded-2xl border space-y-6">
-                <h3 class="text-xl font-bold border-b pb-2">Secteur 6 : Zone de Services 🏥</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-5 rounded-xl">
-                    <div class="space-y-3">
-                        <h4 class="font-bold text-emerald-800">🤔 Preguntas de Reflexión Profunda:</h4>
-                        <ul class="text-xs space-y-2 list-disc pl-4 text-slate-700 leading-relaxed">
-                            <li>¿Qué contenedores de reciclaje son los más importantes en un barrio ecológico?</li>
-                            <li>¿Cómo podemos usar el compost (tierra de comida) para que las plantas del barrio crezcan más fuertes?</li>
-                            <li>¿Por qué es importante tener el centro de salud (l'hôpital) cerca de donde vive la gente?</li>
-                            <li>¿Cómo podemos reducir el gasto de agua en los colegios y edificios públicos?</li>
-                            <li>¿Qué servicios de limpieza silenciosos podemos usar para no molestar a los vecinos?</li>
-                        </ul>
-                    </div>
-                    <div class="space-y-3">
-                        <h4 class="text-xs font-bold text-slate-400 uppercase">Boîte à mots :</h4>
-                        <div class="word-grid">
-                            <div class="word-item">Reciclaje / <b>Le recyclage</b></div>
-                            <div class="word-item">Hospital / <b>L'hôpital</b></div>
-                            <div class="word-item">Salud / <b>La santé</b></div>
-                            <div class="word-item">Basura / <b>Les déchets</b></div>
-                            <div class="word-item">Compostaje / <b>Le compostage</b></div>
-                            <div class="word-item">Limpio / <b>Propre</b></div>
-                        </div>
-                    </div>
+    <!-- SECTOR 6: SERVICES -->
+    <div id="subcontent-sec6" class="sub-content hidden bg-white p-6 rounded-2xl border space-y-6">
+        <h3 class="text-xl font-bold border-b pb-2 text-slate-800">Secteur 6 : Zone de Services</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-3 bg-slate-50 p-5 rounded-xl">
+                <h4 class="font-bold text-emerald-800">🤔 Questions de reflexión :</h4>
+                <ul class="text-sm space-y-2 text-slate-700 list-disc pl-4">
+                    <li>Quels services publiques existent ?</li>
+                    <li>Pourquoi cette zone est importante ?</li>
+                    <li>Comment la police protège le quartier vert ?</li>
+                    <li>Quels services éducatifs aura le quartier ?</li>
+                    <li>Est-ce qu’il aura une bibliothèque ?</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xs font-bold text-slate-400 uppercase mb-3">Boîte à mots :</h4>
+                <div class="grid grid-cols-3 gap-2" onmouseenter="playFlipSound()">
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">L’hôpital</div><div class="word-back">El hospital</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La pharmacie</div><div class="word-back">La farmacia</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La mairie</div><div class="word-back">Ayuntamiento</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Le maire</div><div class="word-back">El alcalde</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La police</div><div class="word-back">La policía</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Les pompiers</div><div class="word-back">Bomberos</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La banque</div><div class="word-back">El banco</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La poste</div><div class="word-back">Correos</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">L'hôtel</div><div class="word-back">El hotel</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">L'église</div><div class="word-back">La iglesia</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La sécurité</div><div class="word-back">Seguridad</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">La santé</div><div class="word-back">La salud</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">L’aide</div><div class="word-back">La ayuda</div></div></div>
+                    <div class="word-card"><div class="word-card-inner"><div class="word-front">Public</div><div class="word-back">Público</div></div></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
  <!-- 5. SESIÓN 8: COIN LINGUISTIQUE -->
 <section id="content-coin" class="main-content hidden space-y-8">
