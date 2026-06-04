@@ -609,5 +609,51 @@
             }
         }
     </script>
+    <!-- Librería de Confeti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+    // Esta función detecta cuando la sección de conclusión se muestra
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'class') {
+                const target = mutation.target;
+                // Si la sección ya no tiene la clase 'hidden', lanzamos confeti
+                if (!target.classList.contains('hidden')) {
+                    lanzarConfeti();
+                }
+            }
+        });
+    });
+
+    const conclusionSection = document.getElementById('content-conclusion');
+    observer.observe(conclusionSection, { attributes: true });
+
+    function lanzarConfeti() {
+        var duration = 3 * 1000;
+        var end = Date.now() + duration;
+
+        (function frame() {
+            confetti({
+                particleCount: 3,
+                angle: 60,
+                spread: 55,
+                origin: { x: 0 },
+                colors: ['#10b981', '#3b82f6', '#6366f1']
+            });
+            confetti({
+                particleCount: 3,
+                angle: 120,
+                spread: 55,
+                origin: { x: 1 },
+                colors: ['#10b981', '#3b82f6', '#6366f1']
+            });
+
+            if (Date.now() < end) {
+                requestAnimationFrame(frame);
+            }
+        }());
+    }
+</script>
 </body>
 </html>
