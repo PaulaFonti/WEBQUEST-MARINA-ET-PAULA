@@ -333,55 +333,169 @@
             </div>
         </section>
 
-        <!-- 5. SESIÓN 8: ESQUINA LINGÜÍSTICA (FRANCÉS ÚNICAMENTE) -->
-        <section id="content-coin" class="main-content hidden space-y-6">
-            <div class="bg-white p-8 rounded-2xl shadow-sm border-2 border-blue-200">
-                <h2 class="text-2xl font-bold text-slate-800 mb-4">✍️ Sesión 8: On écrit pour le maire !</h2>
-                <p class="text-sm text-slate-600 mb-6">Utilisez ce générateur pour vos phrases, mais soyez <strong>créatifs</strong> !</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-3 mb-6">
-                    <div class="p-3 bg-white border rounded-lg cursor-pointer hover:border-blue-400" onclick="selectPart('green', 'Dans mon secteur, il y a')">
-                        <span class="text-[9px] font-bold uppercase block text-slate-400">1. Début</span>
-                        <p class="text-xs font-bold">Dans mon secteur, il y a...</p>
-                    </div>
-                    <div class="p-3 bg-white border rounded-lg space-y-2">
-                        <span class="text-[9px] font-bold uppercase block text-slate-400">2. Élément</span>
-                        <select onchange="selectPart('blue', this.value)" class="w-full text-[10px] p-1 border rounded font-bold">
-                            <option value="">Choisir...</option>
-                            <option value="des arbres">des arbres</option>
-                            <option value="un tramway">un tramway</option>
-                            <option value="des panneaux solaires">des panneaux solaires</option>
-                            <option value="une piste cyclable">une piste cyclable</option>
-                            <option value="un potager">un potager</option>
-                        </select>
-                    </div>
-                    <div class="p-3 bg-white border rounded-lg space-y-2">
-                        <span class="text-[9px] font-bold uppercase block text-slate-400">3. Justification</span>
-                        <select onchange="selectPart('orange', this.value)" class="w-full text-[10px] p-1 border rounded font-bold">
-                            <option value="">Choisir...</option>
-                            <option value="parce que c'est écologique">parce que c'est écologique</option>
-                            <option value="parce que c'est durable">parce que c'est durable</option>
-                            <option value="pour les habitants">pour les habitants</option>
-                            <option value="c'est bon pour l'air">c'est bon pour l'air</option>
-                        </select>
-                    </div>
-                    <div class="p-3 bg-white border rounded-lg space-y-2">
-                        <span class="text-[9px] font-bold uppercase block text-slate-400">4. Inspiration</span>
-                        <select onchange="selectPart('purple', this.value)" class="w-full text-[10px] p-1 border rounded font-bold">
-                            <option value="">Choisir ville...</option>
-                            <option value="comme à Nantes">comme à Nantes</option>
-                            <option value="comme à Lyon">comme à Lyon</option>
-                            <option value="comme à Strasbourg">comme à Strasbourg</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900 text-blue-300 p-6 rounded-xl text-lg text-center font-mono border-4 border-slate-800">
-                    <span id="preview-green">...</span> <span id="preview-blue">...</span> <span id="preview-orange">...</span> <span id="preview-purple">...</span>.
-                </div>
-                <button onclick="copySentence()" class="w-full mt-4 bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">📋 Copier la phrase</button>
+ <!-- 5. SESIÓN 8: COIN LINGUISTIQUE -->
+<section id="content-coin" class="main-content hidden space-y-8">
+    <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border-t-8 border-blue-500">
+        
+        <!-- TÍTULO Y DESCRIPCIÓN -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h2 class="text-4xl font-black text-slate-900 mb-4">✍️ Séance 8 : On écrit pour la maire</h2>
+            
+            <div class="space-y-4">
+                <p class="text-lg text-blue-700 font-medium">
+                    Utilisez ce générateur pour construire vos phrases, mais soyez créatifs ! 
+                </p>
+                <p class="text-slate-600 italic border-l-4 border-blue-200 pl-4 text-sm md:text-base text-left">
+                    Cada alumno deberá escribir información diferente en función del sector al que pertenezca. 
+                    Los elementos mencionados son únicamente ejemplos y cada sector desarrollará contenidos 
+                    específicos relacionados con su propuesta.
+                </p>
             </div>
-        </section>
+        </div>
+
+        <!-- GENERADOR DE FRASES -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+            <!-- 1. DÉBUT -->
+            <div class="p-4 bg-blue-50 border-2 border-blue-100 rounded-2xl cursor-pointer hover:border-blue-400 transition-all group" onclick="selectPart('green', 'Dans mon sector, il y a')">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-blue-400 block mb-2">1. Début</span>
+                <p class="text-sm font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Dans mon secteur, il y a...</p>
+            </div>
+
+            <!-- 2. ÉLÉMENT -->
+            <div class="p-4 bg-white border-2 border-slate-100 rounded-2xl">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">2. Élément</span>
+                <select onchange="selectPart('blue', this.value)" class="w-full text-sm p-2 border-none focus:ring-0 font-bold text-slate-700 bg-transparent cursor-pointer">
+                    <option value="">Choisir...</option>
+                    <option value="des arbres">des arbres</option>
+                    <option value="un tramway">un tramway</option>
+                    <option value="des panneaux solaires">des panneaux solaires</option>
+                    <option value="une piste cyclable">une piste cyclable</option>
+                    <option value="un potager">un potager</option>
+                    <option value="un parc">un parc</option>
+                    <option value="des poubelles de tri">des poubelles de tri</option>
+                </select>
+            </div>
+
+            <!-- 3. JUSTIFICATION -->
+            <div class="p-4 bg-white border-2 border-slate-100 rounded-2xl">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">3. Justification</span>
+                <select onchange="selectPart('orange', this.value)" class="w-full text-sm p-2 border-none focus:ring-0 font-bold text-slate-700 bg-transparent cursor-pointer">
+                    <option value="">Choisir...</option>
+                    <option value="parce que c'est écologique">parce que c'est écologique</option>
+                    <option value="parce que c'est durable">parce que c'est durable</option>  
+                    <option value="parce que c'est bon pour l'environnement">parce que c'est bon pour l'environnement</option>
+                    <option value="pour les habitants">pour les habitants</option>
+                    <option value="pour protéger la nature">pour protéger la nature</option>
+                    <option value="pour réduir la pollution">pour réduir la pollution</option>
+                </select>
+            </div>
+
+            <!-- 4. INSPIRATION -->
+            <div class="p-4 bg-white border-2 border-slate-100 rounded-2xl">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">4. Inspiration</span>
+                <select onchange="selectPart('purple', this.value)" class="w-full text-sm p-2 border-none focus:ring-0 font-bold text-slate-700 bg-transparent cursor-pointer">
+                    <option value="">Choisir ville...</option>
+                    <option value="comme à Paris">comme à Paris</option>
+                    <option value="comme à Dunkerque">comme à Dunkerque</option>
+                    <option value="comme à Nantes">comme à Nantes</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- VISUALIZACIÓN DE LA FRASE -->
+        <div class="relative group mb-12">
+            <div class="bg-slate-900 text-white p-8 rounded-2xl text-xl text-center font-medium shadow-inner border-b-4 border-blue-900">
+                <span id="preview-green" class="text-emerald-400">...</span> 
+                <span id="preview-blue" class="text-blue-400">...</span> 
+                <span id="preview-orange" class="text-orange-400">...</span> 
+                <span id="preview-purple" class="text-purple-400">...</span>.
+            </div>
+            <button onclick="copySentence()" class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-bold shadow-lg transition-transform hover:scale-105">
+                Copier la phrase
+            </button>
+        </div>
+
+        <!-- BOÎTE À EXPRESSIONS -->
+        <div class="mt-16 pt-8 border-t-2 border-slate-100">
+            <details class="group bg-slate-800 rounded-3xl shadow-xl overflow-hidden cursor-pointer transition-all duration-300">
+                <summary class="flex items-center justify-between p-6 list-none">
+                    <div class="text-white">
+                        <h3 class="text-2xl font-bold">Boîte des expressions</h3>
+                        <p class="text-slate-400 text-sm">C'est un outil pour vous aider dans votre production écrite en français.</p>
+                    </div>
+                    <span class="text-white text-2xl group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                
+                <div class="bg-white m-2 p-6 rounded-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Introduire -->
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-blue-600 border-b pb-2 uppercase text-xs tracking-widest">Introduire</h4>
+                        <ul class="text-slate-700 space-y-1 text-sm">
+                            <li><strong>Madame la Maire</strong> (Señora Alcaldesa)</li>
+                            <li><strong>Voici notre projet</strong> (Aquí está nuestro proyecto)</li>
+                            <li><strong>Dans notre quartier</strong> (En nuestro barrio)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Connecteurs A1 -->
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-emerald-600 border-b pb-2 uppercase text-xs tracking-widest">Connecteurs</h4>
+                        <ul class="text-slate-700 space-y-1 text-sm">
+                            <li><strong>D'abord</strong> (Primero)</li>
+                            <li><strong>Ensuite / Puis</strong> (Luego)</li>
+                            <li><strong>Aussi</strong> (También)</li>
+                            <li><strong>Enfin</strong> (Finalmente)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Adjectifs (Niveau A1) -->
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-orange-600 border-b pb-2 uppercase text-xs tracking-widest">Adjectifs</h4>
+                        <ul class="text-slate-700 space-y-1 text-sm">
+                            <li><strong>Vert / Verte</strong> (Verde)</li>
+                            <li><strong>Durable</strong> (Sostenible)</li>
+                            <li><strong>Écologique</strong> (Ecológico)</li>
+                            <li><strong>Moderne</strong> (Moderno)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Décrire -->
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-purple-600 border-b pb-2 uppercase text-xs tracking-widest">Décrire</h4>
+                        <ul class="text-slate-700 space-y-1 text-sm">
+                            <li><strong>Il y a...</strong> (Hay...)</li>
+                            <li><strong>C'est...</strong> (Es...)</li>
+                            <li><strong>Nous voulons...</strong> (Queremos...)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Opinion & But -->
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-pink-600 border-b pb-2 uppercase text-xs tracking-widest">Opinion et But</h4>
+                        <ul class="text-slate-700 space-y-1 text-sm">
+                            <li><strong>Nous pensons que...</strong> (Pensamos que)</li>
+                            <li><strong>C'est bon pour...</strong> (Es bueno para)</li>
+                            <li><strong>Pour nous...</strong> (Para nosotros)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Politesse -->
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-slate-600 border-b pb-2 uppercase text-xs tracking-widest">Politesse</h4>
+                        <ul class="text-slate-700 space-y-1 text-sm">
+                            <li><strong>Merci pour votre attention</strong>(Gracias por su atención)</li>
+                            <li><strong>Merci beaucoup</strong>(Muchas gracias)</li>        
+                            <li><strong>À bientôt !</strong>(¡Hasta pronto!)</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </details>
+        </div>
+
+    </div>
+</section>
 
         <!-- 6. SESIÓN 9: DEFENSA ORAL -->
         <section id="content-parler" class="main-content hidden space-y-6">
