@@ -969,6 +969,36 @@
             }
         }());
     }
+
+    function lanzarConfeti() {
+    const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3'); 
+    audio.volume = 0.4; // Ajusta el volumen a tu gusto
+    audio.play().catch(e => console.log("Sonido bloqueado hasta interacción"));
+
+    var duration = 3 * 1000;
+    var end = Date.now() + duration;
+
+    (function frame() {
+        confetti({
+            particleCount: 3,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 },
+            colors: ['#10b981', '#3b82f6', '#6366f1']
+        });
+        confetti({
+            particleCount: 3,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 },
+            colors: ['#10b981', '#3b82f6', '#6366f1']
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    }());
+}
 </script>
 </body>
 </html>
